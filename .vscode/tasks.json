@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "complie",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"${fileBasename}",
+				"-o",
+				"${fileBasenameNoExtension}.exe"
+			],
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"type": "cppbuild",
+			"label": "g++.exe build active file",
+			"command": "D:\\minGW_posix\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: D:\\minGW_posix\\mingw64\\bin\\cpp.exe"
+		}
+	]
+}
